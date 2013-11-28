@@ -1,0 +1,258 @@
+/* main.css */
+body {
+    background: #FFF;
+    font-family: sans-serif;
+    color: #000;
+}
+
+#div_background {
+    background: url(../images/clouds.jpg) repeat-x;
+    background-color: rgb(174, 185, 196);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* -----------------------------------------------------------------------------
+ * shared - start
+ */
+#div_picButtons {
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    z-index: 1;
+}
+.div_picButton {
+    background: url(../images/picButtons.png) 0px 0px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 391px;
+    height: 52px;
+}
+.div_picButtonHover {
+    background: url(../images/picButtons.png) 0px 52px;
+}
+.div_picButton a {
+    text-decoration: none;
+}
+.div_picButton p {
+    color: #FFF;
+    font-size: 140%;
+    padding: 10px;
+    padding-left: 120px;
+}
+
+#div_textArea {
+    background-color: rgba(35, 35, 35, 0.7);
+    color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.6);
+    padding: 1%;
+    position: absolute;
+    overflow-y: auto;
+    top: 5%;
+    left: 5%;
+    width: 60%;
+    height: 80%;
+}
+/* shared - end
+ * -----------------------------------------------------------------------------
+ */
+
+/* -----------------------------------------------------------------------------
+ * home - start
+ */
+#div_picPortrait {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(154, 154, 154);
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+    padding: 5px;
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    z-index: 3;
+}
+#div_picPortrait img {
+    background-color: rgb(233, 236, 238);
+    display: table;
+    line-height: 0;
+    width: 250px;
+    height: 250px;
+}
+
+#div_textLogo {
+    background: #f00;
+    position: absolute;
+    top: 310px;
+    left: 30px;
+    width: 300px;
+    z-index: 3;
+}
+#div_textLogo p {
+    color: #FFF;
+    font-size: 200%;
+    text-align: center;
+}
+
+#div_textAboutMe {
+    background: url(../images/picDropAbout.png);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 512px;
+    height: 512px;
+    z-index: 2;
+}
+#div_textAboutMe p {
+    color: #FFF;
+    font-size: 105%;
+    text-align: center;
+    text-shadow: #000 -3px 4px 4px;
+    position: absolute;
+    bottom: 50px;
+    left: 0px;
+    width: 400px;
+}
+
+.img_circle {
+    opacity: 0.0;
+    position: absolute;
+    z-index: 0;
+}
+#circleR1 {
+    top: 220px;
+    left: 300px;
+}
+#circleR2 {
+    top: 600px;
+    left: 400px;
+}
+#circleR3 {
+    top: 520px;
+    left: 500px;
+}
+#circleR4 {
+    top: 320px;
+    left: 600px;
+}
+#circleR5 {
+    top: 120px;
+    left: 700px;
+}
+/* home - end
+ * -----------------------------------------------------------------------------
+ */
+
+/* -----------------------------------------------------------------------------
+ * myself - start
+ */
+/* --------- nothing yet ------------------- */
+/* myself - end
+ * -----------------------------------------------------------------------------
+ */
+
+/* -----------------------------------------------------------------------------
+ * projects - start
+ */
+.p_textTitle {
+    font-weight: bold;
+    padding: 5px;
+}
+.p_textTitle a {
+    color: #FFF;
+    text-decoration: none;
+}
+.p_textTitle img {
+    margin-right: 5px;
+    vertical-align: bottom;
+}
+.p_textDescription {
+    margin-bottom: 15px;
+    margin-left: 5px;
+}
+/* projects - end
+ * -----------------------------------------------------------------------------
+ */
+
+/* -----------------------------------------------------------------------------
+ * social - start
+ */
+#div_picsSocial {
+    background-color: rgb(0, 0, 0);
+    color: #FFF;
+    border: 10px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.6);
+    padding: 1%;
+    position: absolute;
+    overflow: hidden;
+/*     overflow-y: no-display; */
+    top: 5%;
+    left: 5%;
+    width: 60%;
+    height: 80%;
+    z-index: 0;
+}
+#div_picsSocialTop {
+    background: url(../images/blocks1.jpg) repeat-x;
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+}
+#div_picsSocialBottom {
+    background: url(../images/blocks2.jpg) repeat-x;
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    left: 0px;
+    bottom: 0px;
+    z-index: 1;
+}
+#div_picsSocialCenter {
+    position: absolute;
+    top: 33%;
+    left: 10%;
+    z-index: 2;
+}
+#div_picsSocialCenter img {
+    padding: 0px 0px 4px 0px;
+    margin: 0px 0px 0px 0px;
+}
+/* social - end
+ * -----------------------------------------------------------------------------
+ */
+
+/* -----------------------------------------------------------------------------
+ * CV - start
+ */
+#div_textAreaWhite {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.6);
+    padding: 1%;
+    position: absolute;
+    overflow-y: auto;
+    top: 5%;
+    left: 5%;
+    width: 60%;
+    height: 80%;
+}
+
+tr h2 {
+/*     padding-bottom: 10px; */
+}
+tr h5 {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+/* CV - end
+ * -----------------------------------------------------------------------------
+ */

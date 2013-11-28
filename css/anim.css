@@ -1,0 +1,23 @@
+/* anim.css */
+#div_picButtons {
+    width: 0px;
+}
+#div_picPortrait {
+    display: none;
+}
+#div_picsSocial {
+    display: none;
+}
+
+#div_textLogo {
+    display: none;
+}
+#div_textAboutMe {
+    display: none;
+}
+#div_textArea {
+    display: none;
+}
+#div_textAreaWhite {
+    display: none;
+}
