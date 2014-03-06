@@ -1,25 +1,28 @@
 <?php
 
-$DEFAULT_PAGE = "home";
+$DEFAULT_PAGE   = "home";
+$POSSIBLE_PAGES = array("home", "myself", "projects", "social", "cv");
 
 if (isset($_GET["page"]))
 {
     $page = htmlspecialchars($_GET["page"]);
-    $possiblePages = array("home", "myself", "projects", "social", "cv");
 
-    if (! in_array($page, $possiblePages))
+    if (! in_array($page, $POSSIBLE_PAGES))
         $page = $DEFAULT_PAGE;
 }
 else
+{
     $page = $DEFAULT_PAGE;
+}
 
-$animHome = ($page == "home" && isset($_GET["anim"]));
+$animateHome = ($page == "home" && isset($_GET["anim"]) && htmlspecialchars($_GET["anim"]) == "1");
 
 include dirname(__FILE__) . DIRECTORY_SEPARATOR . "inc_header.php";
 ?>
 
 <!-- ====================================================================== -->
 <!-- Home Start -->
+
 <?php if ($page == "home") { ?>
 <div id="div_picPortrait">
     <img src="images/photo.jpg" alt="me"/>
@@ -47,11 +50,13 @@ feel free to take a look around! ;)<br/>
 <img src="images/circle1.png" alt="" class="img_circle" id="circleR3"/>
 <img src="images/circle1.png" alt="" class="img_circle" id="circleR4"/>
 <img src="images/circle1.png" alt="" class="img_circle" id="circleR5"/>
+
 <!-- Home End -->
 <!-- ====================================================================== -->
 
 <!-- ====================================================================== -->
 <!-- Myself Start -->
+
 <?php } else if ($page == "myself") { ?>
 <div id="div_textArea">
     <p>
@@ -61,11 +66,13 @@ feel free to take a look around! ;)<br/>
 (This section is still TODO).
     </p>
 </div>
+
 <!-- Myself End -->
 <!-- ====================================================================== -->
 
 <!-- ====================================================================== -->
 <!-- Projects Start -->
+
 <?php } else if ($page == "projects") { ?>
 <div id="div_textArea">
     <p class="p_textTitle">
@@ -91,11 +98,13 @@ feel free to take a look around! ;)<br/>
         It can connect PS3 hardware (Sixaxis/DualShock3 and Keypads) to a Linux-compatible machine.
     </p>
 </div>
+
 <!-- Projects End -->
 <!-- ====================================================================== -->
 
 <!-- ====================================================================== -->
 <!-- Social Start -->
+
 <?php } else if ($page == "social") { ?>
 <div id="div_picsSocial">
     <div id="div_picsSocialTop"></div>
@@ -110,10 +119,13 @@ feel free to take a look around! ;)<br/>
         <a href="http://www.jamendo.com/en/artist/falkTX" target="_blank"><img src="images/tile_jamendo.png" alt="jamendo" width="132px" height="64px"/></a>
     </div>
 </div>
+
 <!-- Social End -->
+<!-- ====================================================================== -->
 
 <!-- ====================================================================== -->
 <!-- CV Start -->
+
 <?php } else if ($page == "cv") { ?>
 <div id="div_textAreaWhite">
     <table border="4">
@@ -181,6 +193,7 @@ feel free to take a look around! ;)<br/>
         </tr>
     </table>
 </div>
+
 <!-- CV End -->
 <!-- ====================================================================== -->
 
