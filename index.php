@@ -199,7 +199,7 @@ feel free to take a look around! ;)<br/>
 
 <?php } ?>
 
-<div id="div_picButtons">
+<div id="div_picButtonsArea">
 <?php if ($page == "home") { ?>
     <div class="div_picButton" id="div_picButtonMyself">
         <a href="#"><p>About Myself</p></a>
