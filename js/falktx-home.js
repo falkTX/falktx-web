@@ -1,6 +1,7 @@
 /* falktx-home.js */
-jQuery.fx.interval = 50;
+//jQuery.fx.interval = 50;
 
+/*
 function animateCircleRandom($circle) {
     $circle
     .animate({
@@ -10,39 +11,42 @@ function animateCircleRandom($circle) {
               },
               8000 + Math.floor(Math.random() * 2000), "linear");
 }
+*/
 
 function animateCloseAll($nextPage) {
-    $("#div_picButtons").animate({width:"0"}, 500, function(){
-        $("#div_picPortrait").fadeOut(500);
+    $("#div_picButtonsArea").animate({"width":"0px"}, 500, function(){
+        $("#div_picPhoto").fadeOut(500);
         $("#div_textLogo").fadeOut(500);
         $("#div_textAboutMe").fadeOut(500);
-        $("#div_background").stopTime();
-        $("#circleR1").clearQueue();
-        $("#circleR2").clearQueue();
-        $("#circleR3").clearQueue();
-        $("#circleR4").clearQueue();
-        $("#circleR5").clearQueue();
-        $("#circleR1").stop();
-        $("#circleR2").stop();
-        $("#circleR3").stop();
-        $("#circleR4").stop();
-        $("#circleR5").stop();
-        $("#circleR1").fadeOut(500);
-        $("#circleR2").fadeOut(500);
-        $("#circleR3").fadeOut(500);
-        $("#circleR4").fadeOut(500);
-        $("#circleR5").fadeOut(500);
         $("#div_background").delay(500).queue(function(){
-            window.location = "/" + $nextPage; // index.php?page=
+            window.location = "index.php?page=" . $nextPage;
         });
     });
 }
+
+//         $("#div_background").stopTime();
+//         $("#circleR1").clearQueue();
+//         $("#circleR2").clearQueue();
+//         $("#circleR3").clearQueue();
+//         $("#circleR4").clearQueue();
+//         $("#circleR5").clearQueue();
+//         $("#circleR1").stop();
+//         $("#circleR2").stop();
+//         $("#circleR3").stop();
+//         $("#circleR4").stop();
+//         $("#circleR5").stop();
+//         $("#circleR1").fadeOut(500);
+//         $("#circleR2").fadeOut(500);
+//         $("#circleR3").fadeOut(500);
+//         $("#circleR4").fadeOut(500);
+//         $("#circleR5").fadeOut(500);
 
 $(document).ready(function(){
 
 // -------------------------------------------------------------------
 // circle animation
 
+/*
 var x_circleR1 = $("#circleR1");
 var x_circleR2 = $("#circleR2");
 var x_circleR3 = $("#circleR3");
@@ -62,30 +66,40 @@ animateCircleRandom(x_circleR2);
 animateCircleRandom(x_circleR3);
 animateCircleRandom(x_circleR4);
 animateCircleRandom(x_circleR5);
+*/
 
 // -------------------------------------------------------------------
 // hide/show about text
 
-var x_aboutMeVisible = true;
+// height needed to show about text area
+var kHeightNeededForAboutText = 565;
+
+// check if about-me area show be visible
+var gAboutMeVisible = ($("#div_background").height() >= kHeightNeededForAboutText);
+
+// hide it if needed
+if (! gAboutMeVisible) {
+    $("#div_textAboutMe").hide();
+}
+
+// -------------------------------------------------------------------
+// resize function
 
 $(window).resize(function(){
-    if ($("#div_background").height() < 565 && x_aboutMeVisible)
+    if ($("#div_background").height() < kHeightNeededForAboutText)
     {
-        $("#div_textAboutMe p").fadeOut(500);
-        x_aboutMeVisible = false;
+        if (gAboutMeVisible)
+        {
+            $("#div_textAboutMe").fadeOut(500);
+            gAboutMeVisible = false;
+        }
     }
-    else if ($("#div_background").height() > 565 && ! x_aboutMeVisible)
+    else if (! gAboutMeVisible)
     {
-        $("#div_textAboutMe p").fadeIn(500);
-        x_aboutMeVisible = true;
+        $("#div_textAboutMe").fadeIn(500);
+        gAboutMeVisible = true;
     }
 });
-
-if ($("#div_background").height() < 565)
-{
-    $("#div_textAboutMe p").hide();
-    x_aboutMeVisible = false;
-}
 
 // -------------------------------------------------------------------
 // button links animation

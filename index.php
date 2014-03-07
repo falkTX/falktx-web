@@ -24,7 +24,7 @@ include dirname(__FILE__) . DIRECTORY_SEPARATOR . "inc_header.php";
 <!-- Home Start -->
 
 <?php if ($page == "home") { ?>
-<div id="div_picPortrait">
+<div id="div_picPhoto">
     <img src="images/photo.jpg" alt="me"/>
 </div>
 
@@ -45,11 +45,13 @@ feel free to take a look around! ;)<br/>
     </p>
 </div>
 
+<!--
 <img src="images/circle1.png" alt="" class="img_circle" id="circleR1"/>
 <img src="images/circle1.png" alt="" class="img_circle" id="circleR2"/>
 <img src="images/circle1.png" alt="" class="img_circle" id="circleR3"/>
 <img src="images/circle1.png" alt="" class="img_circle" id="circleR4"/>
 <img src="images/circle1.png" alt="" class="img_circle" id="circleR5"/>
+-->
 
 <!-- Home End -->
 <!-- ====================================================================== -->
@@ -199,6 +201,8 @@ feel free to take a look around! ;)<br/>
 
 <?php } ?>
 
+<!-- ====================================================================== -->
+
 <div id="div_picButtonsArea">
 <?php if ($page == "home") { ?>
     <div class="div_picButton" id="div_picButtonMyself">
@@ -219,6 +223,8 @@ feel free to take a look around! ;)<br/>
     </div>
 <?php } ?>
 </div>
+
+<!-- ====================================================================== -->
 
 <?php
 include dirname(__FILE__) . DIRECTORY_SEPARATOR . "inc_footer.php";

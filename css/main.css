@@ -1,50 +1,85 @@
 /* main.css */
+
+/*
+ * z-index order:
+ * 0 - body and misc content
+ * 1 - right buttons
+ * 2 - photo
+ */
+
+/*
+ * base setup
+ */
 body {
     background: #FFF;
     color: #000;
     font-family: sans-serif;
-}
-
-#div_background {
+    /* body background */
     background: url("../images/clouds.jpg") repeat-x;
     background-color: rgb(174, 185, 196);
+    z-index: 0;
+}
+
+/*
+ * main background
+ * also works as full-body-size div
+ */
+#div_background {
     position: absolute;
     top: 0px;
     left: 0px;
     width: 100%;
     height: 100%;
+
+    /* set minimum size */
+    min-width: 733px; /* 30 + 300 + 5*2 + 1*2 + 391 */
+    min-height: 358px; /* 50 + (52+25)*4 */
+
+    /* needed for animations */
     overflow: hidden;
 }
 
 /* -----------------------------------------------------------------------------
  * shared - start
  */
+
+/*
+ * are for the buttons on the right
+ * various links are shown in home page; back link on specific pages
+ */
 #div_picButtonsArea {
     position: absolute;
     top: 50px;
     right: 0px;
-    z-index: 1;
+    z-index: 1; /* above normal content */
 }
+/* button */
 .div_picButton {
-    background: url("../images/picButtons.png") 0px 0px;
+    background: url("../images/buttons.png") 0px 0px;
     margin-top: 25px;
     margin-bottom: 25px;
     width: 391px;
     height: 52px;
 }
+/* button when hovered */
 .div_picButtonHover {
-    background: url("../images/picButtons.png") 0px 52px;
+    background: url("../images/buttons.png") 0px 52px;
 }
-.div_picButton a {
-    text-decoration: none;
-}
+/* configure text */
 .div_picButton p {
     color: #FFF;
     font-size: 140%;
     padding: 10px;
     padding-left: 120px;
 }
+/* remove text decoration on links */
+.div_picButton a {
+    text-decoration: none;
+}
 
+/*
+ * text area used for some specific page content, like CV
+ */
 #div_textArea {
     background-color: rgba(35, 35, 35, 0.7);
     color: #FFF;
@@ -58,6 +93,7 @@ body {
     width: 60%;
     height: 80%;
 }
+
 /* shared - end
  * -----------------------------------------------------------------------------
  */
@@ -65,7 +101,11 @@ body {
 /* -----------------------------------------------------------------------------
  * home - start
  */
-#div_picPortrait {
+
+/*
+ * Photo style, adapted from google+ profile page
+ */
+#div_picPhoto {
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(154, 154, 154);
     border-radius: 3px 3px 3px 3px;
@@ -74,9 +114,9 @@ body {
     position: absolute;
     top: 30px;
     left: 50px;
-    z-index: 3;
+    z-index: 2; /* above buttons */
 }
-#div_picPortrait img {
+#div_picPhoto img {
     background-color: rgb(233, 236, 238);
     display: table;
     line-height: 0;
@@ -84,13 +124,16 @@ body {
     height: 250px;
 }
 
+/*
+ * 'falkTX' logo style
+ */
 #div_textLogo {
     background: #f00;
     position: absolute;
     top: 310px;
     left: 30px;
     width: 300px;
-    z-index: 3;
+    z-index: 2; /* above buttons */
 }
 #div_textLogo p {
     color: #FFF;
@@ -98,14 +141,16 @@ body {
     text-align: center;
 }
 
+/*
+ * About me style
+ */
 #div_textAboutMe {
-    background: url("../images/picDropAbout.png");
+    background: url("../images/aboutmebg.png");
     position: absolute;
     bottom: 0px;
     left: 0px;
     width: 512px;
     height: 512px;
-    z-index: 2;
 }
 #div_textAboutMe p {
     color: #FFF;
@@ -143,6 +188,7 @@ body {
     top: 120px;
     left: 700px;
 }
+
 /* home - end
  * -----------------------------------------------------------------------------
  */

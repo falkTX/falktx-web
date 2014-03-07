@@ -1,4 +1,4 @@
-/* falktx-various.js */
+/* falktx-others.js */
 $(document).ready(function(){
 
 // -------------------------------------------------------------------
@@ -14,7 +14,7 @@ $(".div_picButton").hover(
 );
 
 $("#div_picButtonBack").click(function(){
-    $("#div_picButtons").animate({width:"0"}, 500, function(){
+    $("#div_picButtonsArea").animate({"width":"0px"}, 500, function(){
         $("#div_textArea").fadeOut(500);
         $("#div_textAreaWhite").fadeOut(500);
         $("#div_picsSocial").fadeOut(500);
@@ -24,7 +24,7 @@ $("#div_picButtonBack").click(function(){
     });
 });
 
-$("#div_picButtons").animate({width:"391"}, 500, function(){
+$("#div_picButtonsArea").animate({"width":"391px"}, 500, function(){
     $("#div_textArea").fadeIn(500);
     $("#div_textAreaWhite").fadeIn(500);
     $("#div_picsSocial").fadeIn(500);
@@ -33,7 +33,7 @@ $("#div_picButtons").animate({width:"391"}, 500, function(){
 // -------------------------------------------------------------------
 // social
 
-var x_fadeAnim = false;
+/*var x_fadeAnim = false;
 
 function fadeAnimSocial($img)
 {
@@ -55,6 +55,6 @@ $("#div_picsSocialCenter img").hover(
         $(this).stop();
         $(this).fadeTo(300, 1.0);
     }
-);
+);*/
 
 });

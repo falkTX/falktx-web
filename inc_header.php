@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <link type="text/css" rel="stylesheet" href="css/reset.css" media="all"/>
     <link type="text/css" rel="stylesheet" href="css/main.css" media="all"/>
-<?php if ($animHome || $page != "home") { ?>
+<?php if ($animateHome || $page != "home") { ?>
     <link type="text/css" rel="stylesheet" href="css/anim.css" media="all"/>
 <?php } ?>
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>

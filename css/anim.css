@@ -1,8 +1,8 @@
 /* anim.css */
-#div_picButtons {
+#div_picButtonsArea {
     width: 0px;
 }
-#div_picPortrait {
+#div_picPhoto {
     display: none;
 }
 #div_picsSocial {

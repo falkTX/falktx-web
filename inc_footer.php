@@ -1,12 +1,12 @@
 </div>
-<?php if ($animHome) { ?>
+<?php if ($animateHome) { ?>
 <script type="text/javascript">
-    $("#div_picButtons").animate({width:"391"}, 500, function(){
-        $("#div_picPortrait").fadeIn(1000);
+    $("#div_picButtonsArea").animate({"width":"391px"}, 500, function(){
+        $("#div_picPhoto").fadeIn(1000);
         $("#div_textLogo").fadeIn(500);
         $("#div_textAboutMe").fadeIn(500);
         if ($("#div_background").height() < 565) {
-            $("#div_textAboutMe p").hide()
+            $("#div_textAboutMe").hide()
         }
     });
 </script>
