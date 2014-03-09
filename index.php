@@ -16,16 +16,37 @@ else
 }
 
 $animateHome = ($page == "home" && isset($_GET["anim"]) && htmlspecialchars($_GET["anim"]) == "1");
-
-include dirname(__FILE__) . DIRECTORY_SEPARATOR . "inc_header.php";
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>falkTX</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="css/reset.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="css/main.css" media="all"/>
+<?php if ($animateHome || $page != "home") { ?>
+    <link type="text/css" rel="stylesheet" href="css/anim.css" media="all"/>
+<?php } ?>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<?php if ($page == "home") { ?>
+    <script type="text/javascript" src="js/jquery.timers.js"></script>
+    <script type="text/javascript" src="js/falktx-home.js"></script>
+<?php } else { ?>
+    <script type="text/javascript" src="js/falktx-various.js"></script>
+<?php } ?>
+    <noscript>
+        <link rel="stylesheet" href="css/noscript.css"/> <!-- TODO -->
+    </noscript>
+</head>
+<body>
+<div id="div_background">
 
 <!-- ====================================================================== -->
 <!-- Home Start -->
 
 <?php if ($page == "home") { ?>
 <div id="div_picPhoto">
-    <img src="images/photo.jpg" alt="me"/>
+    <img src="images/photo.jpg" alt="me" width="250px" height="250px"/>
 </div>
 
 <div id="div_textLogo">
@@ -128,71 +149,157 @@ feel free to take a look around! ;)<br/>
 <!-- ====================================================================== -->
 <!-- CV Start -->
 
-<?php } else if ($page == "cv") { ?>
+<?php } else if ($page == "cv") {
+$isPortuguese = (isset($_GET["lang"]) && htmlspecialchars($_GET["lang"]) == "pt");
+?>
+
 <div id="div_textAreaWhite">
+    <span id="span_lang"><a href="index.php?page=cv&lang=en">en</a> | <a href="index.php?page=cv&lang=pt">pt</a></span>
     <table border="4">
         <!-- Title -->
         <tr>
-            <td><h2>Europass Curriculum Vitae</h2></td>
-            <td>&nbsp;&nbsp;</td>
-            <td align="left"></td>
+            <td align="right">Europass</td>
+            <td align="left"><h4><span>Curriculum Vitae</span></h4></td>
         </tr>
+        <tr><td><br/><br/></td><td></td></tr>
 
         <!-- Info -->
         <tr>
-            <td align="right"><h5>Personal information</h5></td>
-            <td>&nbsp;&nbsp;</td>
-            <td align="left"></td>
+<?php if ($isPortuguese) { ?>
+            <td align="right"><h4>INFORMAÇÃO PESSOAL</h4></td>
+<?php } else { ?>
+            <td align="right"><h4>PERSONAL INFORMATION</h4></td>
+<?php } ?>
+            <td align="left"><h2>Filipe Alexandre Lopes Coelho</h2></td>
         </tr>
         <tr>
-            <td align="right"><b>Name:</b></td>
-            <td>&nbsp;&nbsp;</td>
-            <td align="left">Filipe Alexandre Lopes Coelho</td>
+            <td align="right"></td>
+            <td align="left"><img src="images/cv_address.png" alt=""/>Bairro do Ranhados no 7, Quintela de Orgens, 3510-683 Orgens, Viseu (Portugal)</td>
         </tr>
         <tr>
-            <td align="right"><b>Address:</b></td>
-            <td>&nbsp;&nbsp;</td>
-            <td align="left">Bairro do Ranhados no. 7, Quintela de Orgens<br/>
-                             3510-683 Orgens<br/>
-                             Portugal</td>
+            <td align="right"></td>
+            <td align="left"><img src="images/cv_phone.png" alt=""/>+351 963453117</td>
         </tr>
         <tr>
-            <td align="right"><b>Cell Phone:</b></td>
-            <td>&nbsp;&nbsp;</td>
-            <td align="left">+351 963 328 388</td>
+            <td align="right"></td>
+            <td align="left"><img src="images/cv_email.png" alt=""/>falktx@falktx.com</td>
         </tr>
         <tr>
-            <td align="right"><b>E-mail:</b></td>
-            <td>&nbsp;&nbsp;</td>
-            <td align="left">falktx@falktx.com</td>
+            <td align="right"></td>
+            <td align="left"><img src="images/cv_webpage.png" alt=""/>falktx.com</td>
         </tr>
         <tr>
-            <td align="right"><b>Nationality:</b></td>
-            <td>&nbsp;&nbsp;</td>
-            <td align="left">Portuguese</td>
+            <td align="right"></td>
+            <td align="left"><img src="images/cv_social.png" alt=""/>
+                <span>IRC (Freenode)</span> falktx
+                <span>| Github</span> falkTX
+                <span>| Facebook</span> falktx
+                <span>| Skype</span> falktx</td>
         </tr>
         <tr>
-            <td align="right"><b>Birthday:</b></td>
-            <td>&nbsp;&nbsp;</td>
-            <td align="left">April 4th, 1988</td>
+            <td align="right"></td>
+            <td align="left">
+                <span>Sexo</span> Masculino
+                <span>| Data de nascimento</span> 4 de Abril de 1988
+                <span>| Nacionalidade</span> Portuguesa</td>
         </tr>
-        <tr>
-            <td align="right"><b>Sex:</b></td>
-            <td>&nbsp;&nbsp;</td>
-            <td align="left">Male</td>
-        </tr>
+        <tr><td><br/><br/></td><td></td></tr>
 
         <!-- Experience -->
         <tr>
-            <td align="right"><h5></h5></td>
-            <td>&nbsp;&nbsp;</td>
+            <td align="right"><h4>EXPERIÊNCIA PROFISSIONAL</h4><br/></td>
             <td align="left"></td>
         </tr>
         <tr>
-            <td align="right"><b>...</b></td>
-            <td>&nbsp;&nbsp;</td>
-            <td align="left">(This section is still TODO)</td>
+            <td align="right" rowspan="2"><h4>Dezembro de 2011 a Maio de 2012</h4></td>
+            <td align="left"><h3>Programador</h3></td>
         </tr>
+        <tr>
+            <td align="left">
+                TSI (Canadá, por vídeo-conferência)<br/>
+                <ul>
+                    <li>Programação de aplicações áudio (C++, VST, Qt)</li>
+                </ul>
+            </td>
+        </tr>
+        <tr><td>&nbsp;</td><td></td></tr>
+        <tr>
+            <td align="right" rowspan="2"><h4>Junho de 2011 a Novembro de 2011</h4></td>
+            <td align="left"><h3>Web design (Estágio Profissional)</h3></td>
+        </tr>
+        <tr>
+            <td align="left">
+                auto.net – Rua Santa Isabel no 7, Repeses, 3500-726 Viseu (Portugal)<br/>
+                <ul>
+                    <li>Programação PHP</li>
+                    <li>Web design</li>
+                </ul>
+            </td>
+        </tr>
+        <tr><td>&nbsp;</td><td></td></tr>
+        <tr>
+            <td align="right" rowspan="2"><h4>Abril de 2010 a Agosto de 2010</h4></td>
+            <td align="left"><h3>Administrador de Sistemas (Estágio)</h3></td>
+        </tr>
+        <tr>
+            <td align="left">
+                Visabeira (Portugal)<br/>
+                <ul>
+                    <li>Administração de Sistemas</li>
+                    <li>Instalação e Manutenção de Sistemas Linux</li>
+                </ul>
+            </td>
+        </tr>
+        <tr><td><br/><br/></td><td></td></tr>
+
+        <!-- Education -->
+        <tr>
+            <td align="right"><h4>EDUCAÇÃO E FORMAÇÃO<h4><br/></td>
+            <td align="left"></td>
+        </tr>
+        <tr>
+            <td align="right" rowspan="2"><h4>Fevereiro de 2014 a Abril de 2014</h4></td>
+            <td align="left"><h3>Criação de Sites Web</h3></td>
+        </tr>
+        <tr>
+            <td align="left">
+                UGT Viseu – Training Center<br/>
+                <ul>
+                    <li>Criação de Sites Web</li>
+                </ul>
+            </td>
+        </tr>
+        <tr><td>&nbsp;</td><td></td></tr>
+        <tr>
+            <td align="right" rowspan="2"><h4>Abril de 2009 a Setembro de 2010</h4></td>
+            <td align="left"><h3>Desenvolvimento de Produtos Multimédia <span id="span_cet">Nível 4 CET</span></h3></td>
+        </tr>
+        <tr>
+            <td align="left">
+                Forino – Associação para A Escola de Novas Tecnologias (Portugal)<br/>
+                <ul>
+                    <li>Manipulação de Imagens</li>
+                    <li>Criação de Páginas Web</li>
+                    <li>Animações para a Web (Flash e Shockwave)</li>
+                    <li>Desenvolvimento/Programação de Software multimédia</li>
+                </ul>
+            </td>
+        </tr>
+        <tr><td><br/><br/></td><td></td></tr>
+
+        <!-- Skills -->
+        <tr>
+            <td align="right"><h4>COMPETÊNCIAS PESSOAIS</h4><br/></td>
+            <td align="left"></td>
+        </tr>
+        <tr><td><br/><br/></td><td></td></tr>
+
+        <!-- Extra Info -->
+        <tr>
+            <td align="right"><h4>INFORMAÇÃO ADICIONAL</h4><br/></td>
+            <td align="left"></td>
+        </tr>
+
     </table>
 </div>
 
@@ -226,6 +333,20 @@ feel free to take a look around! ;)<br/>
 
 <!-- ====================================================================== -->
 
-<?php
-include dirname(__FILE__) . DIRECTORY_SEPARATOR . "inc_footer.php";
-?>
+</div>
+
+<?php if ($animateHome) { ?>
+<script type="text/javascript">
+    $("#div_picButtonsArea").animate({"width":"391px"}, 500, function(){
+        $("#div_picPhoto").fadeIn(1000);
+        $("#div_textLogo").fadeIn(500);
+        $("#div_textAboutMe").fadeIn(500);
+        if ($("#div_background").height() < 565) {
+            $("#div_textAboutMe").hide()
+        }
+    });
+</script>
+<?php } ?>
+
+</body>
+</html>

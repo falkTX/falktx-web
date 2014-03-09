@@ -33,13 +33,13 @@ $("#div_picButtonsArea").animate({"width":"391px"}, 500, function(){
 // -------------------------------------------------------------------
 // social
 
-/*var x_fadeAnim = false;
+var gFadeAnim = false;
 
 function fadeAnimSocial($img)
 {
     $img.fadeTo(300, 0.1, function(){
         $img.fadeTo(300, 0.9, function() {
-            if (x_fadeAnim)
+            if (gFadeAnim)
                 fadeAnimSocial($img);
         });
     });
@@ -47,14 +47,14 @@ function fadeAnimSocial($img)
 
 $("#div_picsSocialCenter img").hover(
     function() {
-        x_fadeAnim = true;
+        gFadeAnim = true;
         fadeAnimSocial($(this));
     },
     function() {
-        x_fadeAnim = false;
+        gFadeAnim = false;
         $(this).stop();
         $(this).fadeTo(300, 1.0);
     }
-);*/
+);
 
 });
