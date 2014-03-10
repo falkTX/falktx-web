@@ -204,22 +204,56 @@ body {
 /* -----------------------------------------------------------------------------
  * projects - start
  */
-.p_textTitle {
-    font-weight: bold;
-    padding: 5px;
+
+.div_proj {
+    width: 100%;
+    text-align: center;
 }
-.p_textTitle a {
-    color: #FFF;
+.div_proj a {
     text-decoration: none;
 }
-.p_textTitle img {
-    margin-right: 5px;
-    vertical-align: bottom;
+.div_proj li {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
-.p_textDescription {
-    margin-bottom: 15px;
-    margin-left: 5px;
+.div_proj ul, .div_proj li {
+    display: inline-block;
 }
+
+#div_proj_kxstudio {
+    background-image: url("../images/proj_bg_kxstudio.png");
+    border: 1px solid #71767A; /*#4C4F52;*/
+    padding-top: 15px;
+    margin-bottom: 5px;
+    height: 196px; /* -20px */
+}
+
+#div_proj_distrho {
+    background-color: #1B1C1C;
+    border: 1px solid #71767A; /*#4C4F52;*/
+    border-bottom: 4px solid #D6D6D6;
+    padding-top: 15px;
+    margin-bottom: 5px;
+    height: 66px;
+}
+#div_proj_distrho span {
+  line-height: 50px;
+}
+
+#div_proj_qtsixa {
+    background-color: #E8E7E7;
+    border: 1px solid #71767A; /*#4C4F52;*/
+    padding-top: 15px;
+    margin-bottom: 5px;
+    height: 130px;
+    color: #000;
+}
+#div_proj_qtsixa li {
+    padding: 0;
+    padding-left: 15px;
+}
+
 /* projects - end
  * -----------------------------------------------------------------------------
  */
@@ -293,15 +327,12 @@ body {
     width: 60%;
     height: 80%;
 }
-#div_textAreaWhite img {
-    height: 16px;
-    padding-right: 10px;
-}
 #div_textAreaWhite tr {
     padding-top: 20px;
 }
 #div_textAreaWhite td {
     padding-left: 20px;
+    line-height: 150%;
 }
 #div_textAreaWhite h2 {
     color: #3F3A38;
@@ -317,19 +348,43 @@ body {
     color: #0E4194;
     font-size: 100%;
     font-weight: normal;
+    line-height: 100%;
 }
 #div_textAreaWhite span {
     color: #1593CB;
+}
+#div_textAreaWhite ul {
+    line-height: 125%;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#table_inside_cv, .img_cv_photo {
+    margin-top: 10px;
+}
+#table_inside_cv tr {
+    padding-top: 0px;
+}
+#table_inside_cv td {
+    padding-left: 5px;
+}
+
+.img_cv {
+    height: 16px;
+/*     padding-right: 10px; */
+}
+.img_cv_photo {
+    height: 120px;
 }
 
 #span_cet {
     float: right;
 }
 
-#span_lang {
+#span_download, #span_lang {
     float: right;
 }
-#span_lang a {
+#span_download a, #span_lang a {
     text-decoration: none;
 }
 

@@ -98,28 +98,43 @@ feel free to take a look around! ;)<br/>
 
 <?php } else if ($page == "projects") { ?>
 <div id="div_textArea">
-    <p class="p_textTitle">
-        <img src="images/ico_kxstudio.png" alt=""/><a href="http://kxstudio.sourceforge.net/" target="_blank">KXStudio</a><br/>
-    </p>
-    <p class="p_textDescription">
-        KXStudio is a collection of tools and tweaks, targeted at audio and video production.<br/>
-        KXStudio is also a Linux Distribution, currently based on Ubuntu 12.04.
-    </p>
+    <div id="div_proj_kxstudio" class="div_proj">
+        <a href="http://kxstudio.sourceforge.net/" target="_blank">
+            <img src="images/ico_kxstudio.png" alt="" class="div_proj_ico"/>
+            <b>KXStudio</b>
+        </a>
+        is a collection of applications and plugins for professional audio production
+        <br/>
+        <ul>
+            <li><a href="http://kxstudio.sourceforge.net/Applications" target="_blank">
+                <img src="images/ico_kx_apps.png" alt="Applications"/><br/><b>Applications</b></a></li>
+            <li><a href="http://kxstudio.sourceforge.net/Plugins" target="_blank">
+                <img src="images/ico_kx_plugins.png" alt="Plugins"/><br/><b>Plugins</b></a></li>
+            <li><a href="http://kxstudio.sourceforge.net/Repositories" target="_blank">
+                <img src="images/ico_kx_repos.png" alt="Repositories"/><br/><b>Repositories</b></a></li>
+        </ul>
+    </div>
 
-    <p class="p_textTitle">
-        <img src="images/ico_distrho.png" alt=""/><a href="http://distrho.sourceforge.net/" target="_blank">DISTRHO</a><br/>
-    </p>
-    <p class="p_textDescription">
-        DISTRHO is an open-source project that provides Cross-Platform Audio Plugins, using Juce and Qt4.
-    </p>
+    <div id="div_proj_distrho" class="div_proj">
+        <a href="http://distrho.sourceforge.net/" target="_blank"><img src="images/distrho-logo.png" alt=""/></a>
+        <span>Open-source project that provides Cross-Platform Audio Plugins</span>
+    </div>
 
-    <p class="p_textTitle">
-        <img src="images/ico_qtsixa.png" alt=""/><a href="http://qtsixa.sourceforge.net/" target="_blank">QtSixA</a><br/>
-    </p>
-    <p class="p_textDescription">
-        QtSixA is a Sixaxis joystick manager.<br/>
-        It can connect PS3 hardware (Sixaxis/DualShock3 and Keypads) to a Linux-compatible machine.
-    </p>
+    <div id="div_proj_qtsixa" class="div_proj">
+        <ul>
+          <li>
+              <a href="http://qtsixa.sourceforge.net/" target="_blank"><img src="images/qtsixa.png" alt=""/></a>
+          </li>
+          <li>
+            <span>
+                <br/><br/>
+                <a href="http://qtsixa.sourceforge.net/" target="_blank"><b>QtSixA</b></a>
+                is a Sixaxis joystick manager.<br/>
+                It can connect PS3 hardware to a Linux-compatible machine.
+            </span>
+        </li>
+        </ul>
+    </div>
 </div>
 
 <!-- Projects End -->
@@ -150,16 +165,17 @@ feel free to take a look around! ;)<br/>
 <!-- CV Start -->
 
 <?php } else if ($page == "cv") {
-$isPortuguese = (isset($_GET["lang"]) && htmlspecialchars($_GET["lang"]) == "pt");
+$isPortuguese = TRUE; //(isset($_GET["lang"]) && htmlspecialchars($_GET["lang"]) == "pt");
 ?>
 
 <div id="div_textAreaWhite">
-    <span id="span_lang"><a href="index.php?page=cv&lang=en">en</a> | <a href="index.php?page=cv&lang=pt">pt</a></span>
-    <table border="4">
+    <!--<span id="span_lang"><a href="index.php?page=cv&lang=en">en</a> | <a href="index.php?page=cv&lang=pt">pt</a></span>-->
+    <span id="span_download"><a href="files/FilipeCV.pdf">Download as PDF</a></span>
+    <table>
         <!-- Title -->
         <tr>
-            <td align="right">Europass</td>
-            <td align="left"><h4><span>Curriculum Vitae</span></h4></td>
+            <td align="right" style="line-height: 150%;">Europass</td>
+            <td align="left"><h4><span style="line-height: 150%;">Curriculum Vitae</span></h4></td>
         </tr>
         <tr><td><br/><br/></td><td></td></tr>
 
@@ -173,35 +189,46 @@ $isPortuguese = (isset($_GET["lang"]) && htmlspecialchars($_GET["lang"]) == "pt"
             <td align="left"><h2>Filipe Alexandre Lopes Coelho</h2></td>
         </tr>
         <tr>
-            <td align="right"></td>
-            <td align="left"><img src="images/cv_address.png" alt=""/>Bairro do Ranhados no 7, Quintela de Orgens, 3510-683 Orgens, Viseu (Portugal)</td>
-        </tr>
-        <tr>
-            <td align="right"></td>
-            <td align="left"><img src="images/cv_phone.png" alt=""/>+351 963453117</td>
-        </tr>
-        <tr>
-            <td align="right"></td>
-            <td align="left"><img src="images/cv_email.png" alt=""/>falktx@falktx.com</td>
-        </tr>
-        <tr>
-            <td align="right"></td>
-            <td align="left"><img src="images/cv_webpage.png" alt=""/>falktx.com</td>
-        </tr>
-        <tr>
-            <td align="right"></td>
-            <td align="left"><img src="images/cv_social.png" alt=""/>
-                <span>IRC (Freenode)</span> falktx
-                <span>| Github</span> falkTX
-                <span>| Facebook</span> falktx
-                <span>| Skype</span> falktx</td>
-        </tr>
-        <tr>
-            <td align="right"></td>
+            <td align="right">
+                <img src="images/cv_photo.jpg" alt="photo" class="img_cv_photo"/>
+            </td>
             <td align="left">
-                <span>Sexo</span> Masculino
-                <span>| Data de nascimento</span> 4 de Abril de 1988
-                <span>| Nacionalidade</span> Portuguesa</td>
+                <table id="table_inside_cv">
+                  <tr><td>
+                      <img src="images/cv_address.png" alt="" class="img_cv"/>
+                  </td><td>
+                      Bairro do Ranhados no 7, Quintela de Orgens, 3510-683 Orgens, Viseu (Portugal)
+                  </td></tr>
+                  <tr><td>
+                      <img src="images/cv_phone.png" alt="" class="img_cv"/>
+                  </td><td>
+                      +351 963453117
+                  </td></tr>
+                  <tr><td>
+                      <img src="images/cv_email.png" alt="" class="img_cv"/>
+                  </td><td>
+                      falktx@falktx.com
+                  </td></tr>
+                  <tr><td>
+                      <img src="images/cv_webpage.png" alt="" class="img_cv"/>
+                  </td><td>
+                      falktx.com
+                  </td></tr>
+                  <tr><td>
+                      <img src="images/cv_social.png" alt="" class="img_cv"/>
+                  </td><td>
+                      <span>IRC (Freenode)</span> falktx
+                      <span>| Github</span> falkTX
+                      <span>| Facebook</span> falktx
+                      <span>| Skype</span> falktx
+                  </td></tr>
+                  <tr><td colspan="2" style="line-height: 50%;"><br/></td></tr>
+                  <tr><td colspan="2">
+                      <span>Sexo</span> Masculino
+                      <span>| Data de nascimento</span> 4 de Abril de 1988
+                      <span>| Nacionalidade</span> Portuguesa
+                  </td></tr>
+                </table>
         </tr>
         <tr><td><br/><br/></td><td></td></tr>
 
@@ -292,12 +319,88 @@ $isPortuguese = (isset($_GET["lang"]) && htmlspecialchars($_GET["lang"]) == "pt"
             <td align="right"><h4>COMPETÊNCIAS PESSOAIS</h4><br/></td>
             <td align="left"></td>
         </tr>
+<!--         TODO: language -->
+
+        <tr>
+            <td align="right"><h4>Competências de comunicação</h4></td>
+            <td align="left">
+                Boa capacidade de comunicação, demonstrada por:<br/>
+                <ul>
+                    <li>Administrador de Forum e canal IRC, dedicado a suporte de produtos próprios</li>
+                    <li>Colaboração em vários podcasts</li>
+                    <li>Diversos trabalhos/projectos realizados em equipa</li>
+                </ul>
+            </td>
+        </tr>
+        <tr><td>&nbsp;</td><td></td></tr>
+        <tr>
+            <td align="right"><h4>Competências de programação</h4></td>
+            <td align="left">
+                <ul>
+                    <li>Domínio de linguagens C, C++ e Python – com preferência em C++ e PyQt</li>
+                    <li>Domínio de GUI toolkits Qt e Juce</li>
+                    <li>Conhecimento básico de OpenGL</li>
+                </ul>
+            </td>
+        </tr>
+        <tr><td>&nbsp;</td><td></td></tr>
+        <tr>
+            <td align="right"><h4>Competências informáticas</h4></td>
+            <td align="left">
+                <ul>
+                    <li>Domínio de software de produção de áudio (FL Studio e Renoise)</li>
+                    <li>Bom conhecimento de Control Version Systems (svn e git)</li>
+                    <li>Bom conhecimento de IDEs (QtCreator e Kdevelop)</li>
+                    <li>Bom conhecimento de Sistemas Operativos (Windows, Mac e Linux)</li>
+                    <li>Conhecimento básico de linguagens Web, nomeadamente JavaScript e PHP</li>
+                    <li>Conhecimento básico de edição de imagem (GIMP)</li>
+                </ul>
+            </td>
+        </tr>
+        <tr><td>&nbsp;</td><td></td></tr>
+        <tr>
+            <td align="right"><h4>Outras competências</h4></td>
+            <td align="left">
+                <ul>
+                    <li>Criador de uma Distribuição Linux própria (KXStudio)</li>
+                    <li>Produtor/Técnico de áudio</li>
+                    <li>Reparação de Sistemas</li>
+                </ul>
+            </td>
+        </tr>
+        <tr><td>&nbsp;</td><td></td></tr>
+        <tr>
+            <td align="right"><h4>Carta de Condução</h4></td>
+            <td align="left">
+                Veículos Ligeiros (B)
+            </td>
+        </tr>
         <tr><td><br/><br/></td><td></td></tr>
 
         <!-- Extra Info -->
         <tr>
             <td align="right"><h4>INFORMAÇÃO ADICIONAL</h4><br/></td>
             <td align="left"></td>
+        </tr>
+        <tr>
+            <td align="right"><h4>
+                                  Projectos Pessoais<br/>
+                                  <i>(Free/Libre/Open-Source Software)</i>
+                              </h4></td>
+            <td align="left">
+                <p>
+                    KXStudio – kxstudio.sf.net<br/>
+                    &nbsp;&nbsp;&nbsp;Conjunto de aplicações multimédia e Distribuição Linux.<br/><br/>
+                </p>
+                <p>
+                    DISTRHO – distrho.sf.net<br/>
+                    &nbsp;&nbsp;&nbsp;Conjunto de plugins para produção de áudio.<br/><br/>
+                </p>
+                <p>
+                    QtSixA – qtsixa.sf.net<br/>
+                    &nbsp;&nbsp;&nbsp;Driver bluetooth de Sixaxis/DualShock3 para Linux<br/><br/>
+                </p>
+            </td>
         </tr>
 
     </table>
