@@ -19,7 +19,7 @@ function animateCloseAll($nextPage) {
         $("#div_textLogo").fadeOut(500);
         $("#div_textAboutMe").fadeOut(500);
         $("#div_background").delay(500).queue(function(){
-            window.location = "index.php?page=" + $nextPage;
+            window.location = $nextPage;
         });
     });
 }
