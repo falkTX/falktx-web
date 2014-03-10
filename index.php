@@ -3,6 +3,13 @@
 $DEFAULT_PAGE   = "home";
 $POSSIBLE_PAGES = array("home", "myself", "projects", "social", "cv");
 
+// local generator
+if (isset($argv))
+{
+    $_GET["page"] = $argv[1];
+    $_GET["anim"] = $argv[2];
+}
+
 if (isset($_GET["page"]))
 {
     $page = htmlspecialchars($_GET["page"]);
@@ -41,10 +48,10 @@ $animateHome = ($page == "home" && isset($_GET["anim"]) && htmlspecialchars($_GE
 <body>
 <div id="div_background">
 
+<?php if ($page == "home") { ?>
 <!-- ====================================================================== -->
 <!-- Home Start -->
 
-<?php if ($page == "home") { ?>
 <div id="div_picPhoto">
     <img src="images/photo.jpg" alt="me" width="250px" height="250px"/>
 </div>
@@ -76,11 +83,10 @@ feel free to take a look around! ;)<br/>
 
 <!-- Home End -->
 <!-- ====================================================================== -->
-
+<?php } else if ($page == "myself") { ?>
 <!-- ====================================================================== -->
 <!-- Myself Start -->
 
-<?php } else if ($page == "myself") { ?>
 <div id="div_textArea">
     <p>
 <img src="images/falk-logo_white.png" alt="FALK"/>
@@ -92,11 +98,10 @@ feel free to take a look around! ;)<br/>
 
 <!-- Myself End -->
 <!-- ====================================================================== -->
-
+<?php } else if ($page == "projects") { ?>
 <!-- ====================================================================== -->
 <!-- Projects Start -->
 
-<?php } else if ($page == "projects") { ?>
 <div id="div_textArea">
     <div id="div_proj_kxstudio" class="div_proj">
         <a href="http://kxstudio.sourceforge.net/" target="_blank">
@@ -139,11 +144,10 @@ feel free to take a look around! ;)<br/>
 
 <!-- Projects End -->
 <!-- ====================================================================== -->
-
+<?php } else if ($page == "social") { ?>
 <!-- ====================================================================== -->
 <!-- Social Start -->
 
-<?php } else if ($page == "social") { ?>
 <div id="div_picsSocial">
     <div id="div_picsSocialTop"></div>
     <div id="div_picsSocialBottom"></div>
@@ -160,11 +164,10 @@ feel free to take a look around! ;)<br/>
 
 <!-- Social End -->
 <!-- ====================================================================== -->
-
+<?php } else if ($page == "cv") { ?>
 <!-- ====================================================================== -->
 <!-- CV Start -->
-
-<?php } else if ($page == "cv") {
+<?php
 $isPortuguese = TRUE; //(isset($_GET["lang"]) && htmlspecialchars($_GET["lang"]) == "pt");
 ?>
 
@@ -408,10 +411,10 @@ $isPortuguese = TRUE; //(isset($_GET["lang"]) && htmlspecialchars($_GET["lang"])
 
 <!-- CV End -->
 <!-- ====================================================================== -->
-
 <?php } ?>
 
 <!-- ====================================================================== -->
+<!-- Buttons Start -->
 
 <div id="div_picButtonsArea">
 <?php if ($page == "home") { ?>
@@ -434,9 +437,10 @@ $isPortuguese = TRUE; //(isset($_GET["lang"]) && htmlspecialchars($_GET["lang"])
 <?php } ?>
 </div>
 
+<!-- Buttons End -->
 <!-- ====================================================================== -->
 
-</div>
+</div> <!-- div_background -->
 
 <?php if ($animateHome) { ?>
 <script type="text/javascript">
