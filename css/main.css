@@ -20,6 +20,10 @@ body {
     background-color: rgb(174, 185, 196);
     z-index: 0;
 }
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
 
 /*
  * main background
@@ -95,6 +99,9 @@ body {
     height: 80%;
     z-index: 1;
 }
+#div_textArea a {
+    color: #7777F7;
+}
 
 /* shared - end
  * -----------------------------------------------------------------------------
@@ -153,6 +160,7 @@ body {
     left: 0px;
     width: 512px;
     height: 512px;
+    z-index: 2;
 }
 #div_textAboutMe p {
     color: #FFF;
@@ -234,6 +242,9 @@ body {
     padding-top: 15px;
     margin-bottom: 5px;
     height: 196px; /* -20px */
+}
+#div_proj_kxstudio a {
+    color: #6464E6;
 }
 
 #div_proj_distrho {
@@ -363,8 +374,6 @@ body {
 }
 #div_textAreaWhite ul {
     line-height: 125%;
-    list-style-type: disc;
-    padding-left: 20px;
 }
 
 #table_inside_cv, .img_cv_photo {

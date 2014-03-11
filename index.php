@@ -85,13 +85,30 @@ feel free to take a look around! ;)<br/>
 <!-- ====================================================================== -->
 <!-- Myself Start -->
 
-<div id="div_textArea">
-    <p>
-<img src="images/falk-logo_white.png" alt="FALK"/>
+<div id="div_textArea" style="line-height: 150%;">
+    <p style="font-size: 125%;">
+      <img src="images/falk-logo_white.png" alt="FALK" style="float:left;padding-right:15px;"/>
+<br/><br/>
+Hello!<br/>
+My name is Filipe Coelho, also known as <b>falkTX</b> on the internet.
     </p>
+    <br/>
     <p>
-(This section is still TODO).
+I love programming and music.<br/>
+I am a quiet person, but never afraid to speak up when needed.
     </p>
+    <br/>
+    <p>
+I'm currently living in Viseu, Portugal.<br/>
+    </p>
+    <br/>
+    <p>
+If you want to contact me, the best ways are:
+    </p>
+    <ul>
+        <li>E-mail: <a href="mailto:falktx@falktx.com">falktx@falktx.com</a></li>
+        <li>IRC: #kxstudio channel on freenode</li>
+    </ul>
 </div>
 
 <!-- Myself End -->
