@@ -2,9 +2,10 @@
 
 /*
  * z-index order:
- * 0 - body and misc content
- * 1 - right buttons
- * 2 - photo
+ * 0 - body and circles
+ * 1 - content
+ * 2 - right buttons
+ * 3 - photo
  */
 
 /*
@@ -51,7 +52,7 @@ body {
     position: absolute;
     top: 50px;
     right: 0px;
-    z-index: 1; /* above normal content */
+    z-index: 2; /* above normal content */
 }
 /* button */
 .div_picButton {
@@ -92,6 +93,7 @@ body {
     left: 5%;
     width: 60%;
     height: 80%;
+    z-index: 1;
 }
 
 /* shared - end
@@ -114,7 +116,7 @@ body {
     position: absolute;
     top: 30px;
     left: 50px;
-    z-index: 2; /* above buttons */
+    z-index: 3; /* above buttons */
 }
 #div_picPhoto img {
     background-color: rgb(233, 236, 238);
@@ -133,7 +135,7 @@ body {
     top: 310px;
     left: 30px;
     width: 300px;
-    z-index: 2; /* above buttons */
+    z-index: 3; /* above buttons */
 }
 #div_textLogo p {
     color: #FFF;
@@ -163,6 +165,9 @@ body {
     width: 400px;
 }
 
+/*
+ * circles
+ */
 .img_circle {
     opacity: 0.0;
     position: absolute;
@@ -196,7 +201,9 @@ body {
 /* -----------------------------------------------------------------------------
  * myself - start
  */
+
 /* --------- nothing yet ------------------- */
+
 /* myself - end
  * -----------------------------------------------------------------------------
  */
@@ -275,7 +282,7 @@ body {
     left: 5%;
     width: 60%;
     height: 80%;
-    z-index: 0;
+    z-index: 1;
 }
 #div_picsSocialTop {
     background: url("../images/blocks1.jpg") repeat-x;
@@ -284,7 +291,7 @@ body {
     height: 150px;
     left: 0px;
     top: 0px;
-    z-index: 1;
+    z-index: 2;
 }
 #div_picsSocialBottom {
     background: url("../images/blocks2.jpg") repeat-x;
@@ -293,13 +300,13 @@ body {
     height: 150px;
     left: 0px;
     bottom: 0px;
-    z-index: 1;
+    z-index: 2;
 }
 #div_picsSocialCenter {
     position: absolute;
     top: 33%;
     left: 10%;
-    z-index: 2;
+    z-index: 3;
 }
 #div_picsSocialCenter img {
     padding: 0px 0px 4px 0px;
@@ -326,6 +333,7 @@ body {
     left: 5%;
     width: 60%;
     height: 80%;
+    z-index: 1;
 }
 #div_textAreaWhite tr {
     padding-top: 20px;

@@ -73,13 +73,11 @@ feel free to take a look around! ;)<br/>
     </p>
 </div>
 
-<!--
 <img src="images/circle1.png" alt="" class="img_circle" id="circleR1"/>
 <img src="images/circle1.png" alt="" class="img_circle" id="circleR2"/>
 <img src="images/circle1.png" alt="" class="img_circle" id="circleR3"/>
 <img src="images/circle1.png" alt="" class="img_circle" id="circleR4"/>
 <img src="images/circle1.png" alt="" class="img_circle" id="circleR5"/>
--->
 
 <!-- Home End -->
 <!-- ====================================================================== -->
@@ -288,7 +286,7 @@ $isPortuguese = TRUE; //(isset($_GET["lang"]) && htmlspecialchars($_GET["lang"])
             <td align="left"></td>
         </tr>
         <tr>
-            <td align="right" rowspan="2"><h4>Fevereiro de 2014 a Abril de 2014</h4></td>
+            <td align="right" rowspan="2"><h4>Fevereiro de 2014 a Março de 2014</h4></td>
             <td align="left"><h3>Criação de Sites Web</h3></td>
         </tr>
         <tr>
@@ -355,7 +353,7 @@ $isPortuguese = TRUE; //(isset($_GET["lang"]) && htmlspecialchars($_GET["lang"])
                     <li>Bom conhecimento de Control Version Systems (svn e git)</li>
                     <li>Bom conhecimento de IDEs (QtCreator e Kdevelop)</li>
                     <li>Bom conhecimento de Sistemas Operativos (Windows, Mac e Linux)</li>
-                    <li>Conhecimento básico de linguagens Web, nomeadamente JavaScript e PHP</li>
+                    <li>Bom conhecimento de linguagens Web, nomeadamente HTML, CSS, JavaScript e PHP</li>
                     <li>Conhecimento básico de edição de imagem (GIMP)</li>
                 </ul>
             </td>
@@ -366,6 +364,7 @@ $isPortuguese = TRUE; //(isset($_GET["lang"]) && htmlspecialchars($_GET["lang"])
             <td align="left">
                 <ul>
                     <li>Criador de uma Distribuição Linux própria (KXStudio)</li>
+                    <li>Debian packaging</li>
                     <li>Produtor/Técnico de áudio</li>
                     <li>Reparação de Sistemas</li>
                 </ul>
