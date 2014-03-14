@@ -62,7 +62,7 @@ $animateHome = ($page == "home" && isset($_GET["anim"]) && htmlspecialchars($_GE
 
 <div id="div_textAboutMe">
     <p>
-My name is Filipe Coelho, aka 'falkTX',<br/>
+<My name is Filipe Coelho, aka 'falkTX',<br/>
 and welcome to my webpage!<br/>
 <br/>
 Here you can learn more about myself,<br/>
@@ -86,10 +86,10 @@ feel free to take a look around! ;)<br/>
 <!-- Myself Start -->
 
 <div id="div_textArea" style="line-height: 150%;">
-    <p style="font-size: 125%;">
+    <p style="font-size: 110%;">
       <img src="images/falk-logo_white.png" alt="FALK" style="float:left;padding-right:15px;"/>
 <br/><br/>
-Hello!<br/>
+<strong>Hello!</strong><br/>
 My name is Filipe Coelho, also known as <b>falkTX</b> on the internet.
     </p>
     <br/>
@@ -100,6 +100,7 @@ I am a quiet person, but never afraid to speak up when needed.
     <br/>
     <p>
 I'm currently living in Viseu, Portugal.<br/>
+I know Portuguese and English, and I'm currently studying Japanese.
     </p>
     <br/>
     <p>
@@ -107,7 +108,7 @@ If you want to contact me, the best ways are:
     </p>
     <ul>
         <li>E-mail: <a href="mailto:falktx@falktx.com">falktx@falktx.com</a></li>
-        <li>IRC: #kxstudio channel on freenode</li>
+        <li>IRC: #kxstudio or #lad channels on freenode</li>
     </ul>
 </div>
 
