@@ -62,7 +62,7 @@ $animateHome = ($page == "home" && isset($_GET["anim"]) && htmlspecialchars($_GE
 
 <div id="div_textAboutMe">
     <p>
-<My name is Filipe Coelho, aka 'falkTX',<br/>
+My name is Filipe Coelho, aka 'falkTX',<br/>
 and welcome to my webpage!<br/>
 <br/>
 Here you can learn more about myself,<br/>
