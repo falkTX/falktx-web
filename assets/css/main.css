@@ -3031,6 +3031,14 @@
 				transform: translateX(-17em);
 			}
 
+		/* Button */
+
+			input[type="submit"],
+			input[type="reset"],
+			input[type="button"],
+			.button {
+				padding: 0 1em;
+			}
 	}
 
 /* XSmall */
@@ -3084,15 +3092,6 @@
 			ul.feature-icons li {
 				display: block;
 				width: 100%;
-			}
-
-		/* Button */
-
-			input[type="submit"],
-			input[type="reset"],
-			input[type="button"],
-			.button {
-				padding: 0;
 			}
 
 	}
