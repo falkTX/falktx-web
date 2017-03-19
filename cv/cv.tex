@@ -1,0 +1,269 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Wenneker Resume/CV
+% LaTeX Template
+% Version 1.1 (19/6/2016)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com) with extensive modifications by 
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper,12pt]{memoir} % Font and paper size
+
+\input{structure.tex} % Include the file specifying document layout and packages
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION 
+%----------------------------------------------------------------------------------------
+
+\userinformation{
+\begin{flushright}
+\includegraphics[width=0.6\columnwidth]{photo.jpg}\\[\baselineskip]
+\small
+\textbf{Filipe Coelho} \\
+falktx@falktx.com \\
++49 1573 4020937 \\
++351 963 453 117 \\
+\Sep
+\textbf{Address} \\
+Kluckstr. 34 c/o Stein \\
+10785 Berlin \\
+Germany \\
+\Sep
+\textbf{Online Profile} \\
+fb.com/falktx \\
+github.com/falkTX \\
+github.com/DISTRHO \\
+\vfill
+\end{flushright}
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\userinformation % Print your information in the left column
+
+\framebreak % End of the first column
+
+%----------------------------------------------------------------------------------------
+%	HEADING
+%----------------------------------------------------------------------------------------
+
+\cvheading{Filipe Coelho} % Large heading - your name
+
+\cvsubheading{Software Developer} % Subheading - your occupation/specialization
+
+%----------------------------------------------------------------------------------------
+%	ABOUT ME
+%----------------------------------------------------------------------------------------
+
+\aboutme{About Me}{\\
+Self-taught software developer, with personal interest on C++ and Python.\\
+Easily motivated by a good challenge. Open-Source enthusiast.
+}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+
+\CVSection{Software Development Skills}
+
+%------------------------------------------------
+
+\CVItem{Programming Languages}
+{\begin{tabular}{p{0.15\textwidth} p{0.15\textwidth} p{0.15\textwidth} p{0.15\textwidth}}
+\bluebullet C & \bluebullet C++ & \bluebullet Javascript & \bluebullet Python\\
+\end{tabular}}
+
+%------------------------------------------------
+
+\CVItem{Programming Frameworks}
+{\begin{tabular}{p{0.15\textwidth} p{0.15\textwidth} p{0.15\textwidth} p{0.15\textwidth}}
+\bluebullet Juce & \bluebullet Qt & \bluebullet HTML5/CSS/JavaScript\\
+\end{tabular}}
+
+%------------------------------------------------
+
+\CVItem{Programming Systems}
+{\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth}}
+\bluebullet Bash scripting & \bluebullet Debian packaging\\
+\bluebullet Linux (OS and APIs) & \bluebullet git (versioning system)\\
+\end{tabular}}
+
+%------------------------------------------------
+
+\CVItem{Created Open-Source Projects}{
+\begin{itemize}
+	\item \textbf{KXStudio} - \textit{kxstudio.linuxaudio.org} - 2009\\
+	  Linux distribution and repositories, focused on audio production.\\
+	  Can be installed as full OS, or extend Debian/Ubuntu based systems through its repositories.\vspace{0.04cm}
+
+	\item \textbf{Cadence} - \textit{kxstudio.linuxaudio.org/cadence} - 2009\\
+	  Collection of tools to manage Linux audio.\\
+	  Includes Audio settings, patchbay, recorder, meter and logs viewer.\vspace{0.04cm}
+
+	\item \textbf{Carla} - \textit{kxstudio.linuxaudio.org/carla} - 2011\\
+	  Fully-featured cross-platform audio plugin host.\\
+	  Loads plugins (LADSPA, DSSI, LV2, VST, AU) and sample banks (GIG, SF2, SFZ), and also works as an audio plugin itself.\vspace{0.04cm}
+
+	\item \textbf{DPF} - \textit{github.com/DISTRHO/DPF} - 2011\\
+	  C++ framework to create real-time cross-platform audio plugins.\\
+	  Provides UI support using OpenGL, with integrated NanoVG library.\vspace{0.04cm}
+
+	\item \textbf{DPF-Plugins} - \textit{github.com/DISTRHO/DPF-Plugins} - 2012\\
+	  Collection of real-time audio plugins.\\
+	  Uses DPF for cross-platform multi-plugin-format support.\vspace{0.04cm}
+
+	\item \textbf{DISTRHO-Ports} - \textit{distrho.sf.net/ports} - 2011\\
+	  Linux ports of existing open-source audio plugins, using Juce.\\
+	  Contains a forked version of the Juce library for LV2 plugin support.
+\end{itemize}
+}
+
+%------------------------------------------------
+
+\Sep % Extra whitespace after the end of a major section
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\CVSection{Work Experience}
+
+%------------------------------------------------
+
+\CVItem{September 2015 - current, \textit{Software Developer}, MOD Duo GbR}{
+\begin{itemize}
+	\item Creation of a highly-optimized, real-time Linux embedded system
+	\item Programming of complex html interface and webserver
+	\item Programming of real-time audio applications and plugins
+\end{itemize}
+Technologies used: HTML5, Javascript, Python, C, C++, Buildroot
+}
+
+%------------------------------------------------
+
+\CVItem{April - June 2016, \textit{Software Developer}, Tracktion Software Corp.}{
+\begin{itemize}
+	\item Programming of real-time audio applications and plugins
+\end{itemize}
+Technologies used: C++, Juce
+}
+
+%------------------------------------------------
+
+\CVItem{December 2011 - May 2012, \textit{Software Developer}, TSI}{
+\begin{itemize}
+	\item Programming of a real-time audio application
+\end{itemize}
+Technologies used: C++, Qt4
+}
+
+%------------------------------------------------
+
+\Sep % Extra whitespace after the end of a major section
+
+%----------------------------------------------------------------------------------------
+%	NEW PAGE DELIMITER
+%	Place this block wherever you would like the content of your CV to go onto the next page
+%----------------------------------------------------------------------------------------
+
+\clearpage % Start a new page
+
+\userinformation % Print your information in the left column
+
+\framebreak % End of the first column
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS
+%----------------------------------------------------------------------------------------
+
+\CVSection{Interests}
+
+%------------------------------------------------
+
+\CVItem{Professional}{
+\begin{itemize}
+	\item Creation of desktop applications
+	\item Software development focused on high-performance, with real-time requirements in mind
+	\item Software with hardware integration
+\end{itemize}
+}
+
+%------------------------------------------------
+
+\CVItem{Personal}{
+\begin{itemize}
+	\item Audio production (FL Studio, Renoise and self-made applications)
+	\item Linux and Open-Source enthusiast
+\end{itemize}
+}
+
+%------------------------------------------------
+
+\Sep % Extra whitespace after the end of a major section
+
+%----------------------------------------------------------------------------------------
+%	EXTRA ONLINE LINKS
+%----------------------------------------------------------------------------------------
+
+\CVSection{Publications and Presentations}
+
+% A small collection of publications about my projects or presentations I did.
+
+%------------------------------------------------
+
+\CVItem{2016, \textit{LV2 Plugin Publishing for MOD}, Linux Audio Conference}{
+ https://media.ccc.de/v/minilac16-publishingyourlv2
+\vspace{0.25cm}
+}
+
+\CVItem{2016, \textit{Making Plugins with DPF}, Linux Audio Conference}{
+ https://media.ccc.de/v/minilac16-ltsmakesomeplugins
+\vspace{0.25cm}
+}
+
+\CVItem{2015, \textit{Carla Presentation}, Linux Audio Conference}{
+ http://lac.linuxaudio.org/2015/video.php?id=47\&h=576
+\vspace{0.25cm}
+}
+
+\CVItem{2015, \textit{Testing audio plugins with Carla}, Linux Audio Conference}{
+ http://lac.linuxaudio.org/2015/video.php?id=70\&h=576
+\vspace{0.25cm}
+}
+
+\CVItem{2015, \textit{Personal Interview}, Libre Music Production}{
+ http://libremusicproduction.com/articles/friday-interview-2-falktx
+\vspace{0.25cm}
+}
+
+\CVItem{2015, \textit{Publication about Carla}, Linux Magazine}{
+ http://www.linux-magazine.com/Issues/2015/175/Carla
+\vspace{0.25cm}
+}
+
+\CVItem{2014, \textit{DPF Presentation}, Linux Audio Conference}{
+ http://lac.linuxaudio.org/2014/video.php?id=91\&h=720
+\vspace{0.25cm}
+}
+
+%------------------------------------------------
+
+\Sep % Extra whitespace after the end of a major section
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
