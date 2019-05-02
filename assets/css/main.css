@@ -1,5 +1,6 @@
 @import url("font-awesome.min.css");
-@import url("https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Source+Code+Pro:400");
+@import url("source-code-pro.css");
+/* @import url("https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Source+Code+Pro:400"); */
 
 /*
 	Read Only by HTML5 UP
@@ -54,6 +55,12 @@
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
+	}
+
+/* Custom */
+
+	ul.feature-icons > li > a {
+		color: #555;
 	}
 
 /* Containers */
@@ -1609,6 +1616,7 @@
 	}
 
 	h3 {
+		color: #555;
 		font-size: 1.75em;
 		line-height: 1.5em;
 	}
@@ -1700,7 +1708,7 @@
 	}
 
 	header p {
-		color: #aaa;
+		color: #777;
 		position: relative;
 		margin: 0 0 1.6875em 0;
 	}
